@@ -66,6 +66,12 @@ public class CreateMinion
 		SaveInformation.SaveAllInformation();
 	}
 
+	public BaseMinion Minion()
+	{
+		//return newMinion;
+		return null;
+	}
+
 	private void StoreNewPlayerInfo()
 	{
 		GameInformations.MinionName = newMinion.MinionName;

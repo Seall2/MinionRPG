@@ -6,11 +6,11 @@ public class BattleStateStart : MonoBehaviour
 	/*private BaseMinionClass newEnemy = new BaseMinionClass ();
 	private StatCalculations statCalculationScript = StatCalculations ();
 	private BaseMinionClass[] minionTypes = new BaseMinionClass[]{new BaseMinionSwarm(), new BaseMinionBrute(), new BaseMinionLeader(), new BaseMinionBuffer()};
-	//private StatCalculations statCalculations = new StateCalculations();
+	private StatCalculations statCalculations = new StateCalculations();
 	public void PrepareBattle()
 	{
 		CreateNewEnemy ();
-		//ChooseWhoGoesFirst ();
+		ChooseWhoGoesFirst ();
 	}
 
 	private void CreateNewEnemy()
@@ -22,7 +22,7 @@ public class BattleStateStart : MonoBehaviour
 		newEnemy.Speed = statCalculationScript.CalculateStat(newEnemy.Speed, StatCalculations.StatType.SPEED, true);
 	}
 
-	/*private void ChooseWhoGoesFirst()
+	private void ChooseWhoGoesFirst()
 	{
 		if (GameInformations.speed > newEnemy.Speed) 
 		{
