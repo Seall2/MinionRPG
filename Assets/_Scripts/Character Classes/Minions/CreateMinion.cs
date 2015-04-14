@@ -66,59 +66,6 @@ public class CreateMinion
 		SaveInformation.SaveAllInformation();
 	}
 
-	public void CreateyourMinion()
-	{
-				newMinion = new BaseMinion();
-
-		minion = minionTypes [Random.Range (0, minionTypes.Length + 1)];
-		
-		if (minion.MinionClassName == "Swarm") 
-		{
-			isSwarmClass = true;
-		} 
-		else if (minion.MinionClassName == "Brute") 
-		{
-			isBruteClass = true;
-		}
-		else if (minion.MinionClassName == "Leader") 
-		{
-			isLeaderClass = true;
-		}
-		else if (minion.MinionClassName == "Buffer") 
-		{
-			isBufferClass = true;
-		}
-		
-		minionName = newMinion.MinionClass.MinionClassName;
-		
-		if(isSwarmClass)
-		{
-			newMinion.MinionClass = new BaseMinionSwarm();
-		}
-		else if(isBruteClass)
-		{
-			newMinion.MinionClass = new BaseMinionBrute();
-		}
-		else if(isLeaderClass)
-		{
-			newMinion.MinionClass = new BaseMinionLeader();
-		}
-		else if(isBufferClass)
-		{
-			newMinion.MinionClass = new BaseMinionBuffer();
-		}
-		
-		newMinion.MinionLevel = 1;
-		newMinion.Endurance = newMinion.MinionClass.Endurance;
-		newMinion.Smarts = newMinion.MinionClass.Smarts;
-		newMinion.Power = newMinion.MinionClass.Power;
-		newMinion.Speed = newMinion.MinionClass.Speed;
-		newMinion.MinionName = minionName;
-		
-		StoreNewPlayerInfo();
-		SaveInformation.SaveAllInformation();
-	}
-
 	private void StoreNewPlayerInfo()
 	{
 		GameInformations.MinionName = newMinion.MinionName;
