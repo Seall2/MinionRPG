@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreateMinion : MonoBehaviour 
+public class CreateMinion
 {
 	private BaseMinion newMinion;
 	private bool isSwarmClass;
